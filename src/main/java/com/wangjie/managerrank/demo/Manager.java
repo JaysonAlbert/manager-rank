@@ -1,17 +1,33 @@
 package com.wangjie.managerrank.demo;
 
+import org.springframework.data.annotation.Id;
+
+import java.util.List;
+
 public class Manager
 {
+    @Id
+    private String id;
+
     private String url;
     private String name;
-    private String appointmentDate;
+    private String appointment_date;
     private String introduction;
     private String company;
-    private String fundAssetSize;
+    private String fund_asset_size;
     private String sex;
-    private String picture;
+    private List<String> picture;
+    private List<String> image_urls;
     private String funds;
-    private String bestReturn;
+    private String best_return;
+
+    public List<String> getImage_urls() {
+        return image_urls;
+    }
+
+    public void setImage_urls(List<String> image_urls) {
+        this.image_urls = image_urls;
+    }
 
     public String getUrl() {
         return url;
@@ -29,12 +45,12 @@ public class Manager
         this.name = name;
     }
 
-    public String getAppointmentDate() {
-        return appointmentDate;
+    public String getAppointment_date() {
+        return appointment_date;
     }
 
-    public void setAppointmentDate(String appointmentDate) {
-        this.appointmentDate = appointmentDate;
+    public void setAppointment_date(String appointment_date) {
+        this.appointment_date = appointment_date;
     }
 
     public String getIntroduction() {
@@ -53,12 +69,12 @@ public class Manager
         this.company = company;
     }
 
-    public String getFundAssetSize() {
-        return fundAssetSize;
+    public String getFund_asset_size() {
+        return fund_asset_size;
     }
 
-    public void setFundAssetSize(String fundAssetSize) {
-        this.fundAssetSize = fundAssetSize;
+    public void setFund_asset_size(String fund_asset_size) {
+        this.fund_asset_size = fund_asset_size;
     }
 
     public String getSex() {
@@ -69,11 +85,11 @@ public class Manager
         this.sex = sex;
     }
 
-    public String getPicture() {
+    public List<String> getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(List<String> picture) {
         this.picture = picture;
     }
 
@@ -85,11 +101,11 @@ public class Manager
         this.funds = funds;
     }
 
-    public String getBestReturn() {
-        return bestReturn;
+    public String getBest_return() {
+        return best_return;
     }
 
-    public void setBestReturn(String bestReturn) {
-        this.bestReturn = bestReturn;
+    public void setBest_return(String best_return) {
+        this.best_return = best_return;
     }
 }

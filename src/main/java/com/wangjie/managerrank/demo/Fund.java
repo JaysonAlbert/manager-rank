@@ -1,6 +1,11 @@
 package com.wangjie.managerrank.demo;
 
+import org.springframework.data.annotation.Id;
+
 public class Fund {
+    @Id
+    private String id;
+
     private String code;
     private String name;
     private String type;
@@ -11,6 +16,14 @@ public class Fund {
     private String average;
     private String rank;
     private String manager;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCode() {
         return code;
