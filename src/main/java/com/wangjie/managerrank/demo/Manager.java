@@ -3,6 +3,7 @@ package com.wangjie.managerrank.demo;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
+import java.util.Map;
 
 public class Manager
 {
@@ -16,7 +17,7 @@ public class Manager
     private String company;
     private String fund_asset_size;
     private String sex;
-    private List<String> picture;
+    private List<Map> picture;
     private List<String> image_urls;
     private String funds;
     private String best_return;
@@ -85,11 +86,11 @@ public class Manager
         this.sex = sex;
     }
 
-    public List<String> getPicture() {
+    public List<Map> getPicture() {
         return picture;
     }
 
-    public void setPicture(List<String> picture) {
+    public void setPicture(List<Map> picture) {
         this.picture = picture;
     }
 
