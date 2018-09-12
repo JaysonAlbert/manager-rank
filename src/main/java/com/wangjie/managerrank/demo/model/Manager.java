@@ -1,4 +1,4 @@
-package com.wangjie.managerrank.demo;
+package com.wangjie.managerrank.demo.model;
 
 import org.springframework.data.annotation.Id;
 

@@ -1,5 +1,6 @@
-package com.wangjie.managerrank.demo;
+package com.wangjie.managerrank.demo.controller;
 
+import com.wangjie.managerrank.demo.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
