@@ -1,0 +1,44 @@
+
+server:
+  port: 443
+
+  ssl:
+    key-store-type: JKS
+
+    key-store: classpath:keystore.jks
+  # The password used to generate the certificate
+    key-store-password: password
+  # The alias mapped to the certificate
+
+spring:
+  data:
+    mongodb:
+      database: fundmanager
+
+  servlet:
+    multipart:
+      max-file-size: 500KB
+      max-request-size: 500KB
+
+miniprogram:
+  secret: 从微信公众平台获取
+  appid: 从微信公众平台获取
+  login-url: https://api.weixin.qq.com/sns/jscode2session?appid={appid}&secret={secret}&js_code={code}&grant_type=authorization_code
+
+---
+spring:
+  profiles: dev
+
+image:
+  path: C:\Users\jayso\PycharmProjects\fundmanager\images\full
+
+logging:
+  level:
+    root: info
+
+---
+spring:
+  profiles: dep
+
+image:
+  path: /home/ubuntu/fundmanager/images/full

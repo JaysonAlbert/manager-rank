@@ -6,10 +6,16 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity()
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private String [] publicUrls = new String[]{
+            "/login",
+            "/logout"
+    };
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.requiresChannel().anyRequest().requiresSecure();
+        http.csrf().ignoringAntMatchers(publicUrls);
     }
 }

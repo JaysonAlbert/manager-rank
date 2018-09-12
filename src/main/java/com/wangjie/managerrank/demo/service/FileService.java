@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 
 @Service
 public class FileService {
-    Logger log = LoggerFactory.getLogger(FileService.class);
+    private Logger log = LoggerFactory.getLogger(FileService.class);
 
     private Path rootLocation;
 
