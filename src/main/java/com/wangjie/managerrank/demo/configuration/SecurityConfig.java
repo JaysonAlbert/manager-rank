@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private String [] publicUrls = new String[]{
             "/login",
-            "/logout"
+            "/logout",
     };
 
     @Override
