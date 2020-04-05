@@ -1,13 +1,13 @@
 
 server:
-  port: 443
+  port: 8080
 
   ssl:
     key-store-type: JKS
 
     key-store: classpath:keystore.jks
   # The password used to generate the certificate
-    key-store-password: password
+    key-store-password: bilibili
   # The alias mapped to the certificate
 
 spring:
@@ -21,8 +21,8 @@ spring:
       max-request-size: 500KB
 
 miniprogram:
-  secret: 从微信公众平台获取
-  appid: 从微信公众平台获取
+  secret: 3b14abc0ecbb915fdabbee2a8b3e6d31
+  appid: wx775176a92e70cee0
   login-url: https://api.weixin.qq.com/sns/jscode2session?appid={appid}&secret={secret}&js_code={code}&grant_type=authorization_code
 
 ---

@@ -16,7 +16,6 @@ public class UserSession {
     private String id;
 
     @Field
-    @Indexed(name="loginDataIndex",expireAfterSeconds =  86400) // 24 * 60 * 60
     private Date loginDate;
 
     public String getId() {

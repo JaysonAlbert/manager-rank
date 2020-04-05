@@ -2,10 +2,11 @@ package com.wangjie.managerrank.demo.model;
 
 import org.springframework.data.annotation.Id;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public class Manager
+public class Manager implements Serializable
 {
     @Id
     private String id;
@@ -21,6 +22,14 @@ public class Manager
     private List<String> image_urls;
     private String funds;
     private String best_return;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public List<String> getImage_urls() {
         return image_urls;
