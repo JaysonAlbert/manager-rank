@@ -1,7 +1,11 @@
 package com.wangjie.managerrank.demo.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
+@Getter @Setter
 public class Response<T> implements Serializable {
     private String code;
     private String errorMsg;
@@ -42,29 +46,5 @@ public class Response<T> implements Serializable {
             response.data = data;
             return response;
         }
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getErrorMsg() {
-        return errorMsg;
-    }
-
-    public void setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
     }
 }
